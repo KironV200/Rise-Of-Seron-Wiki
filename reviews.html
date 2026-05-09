@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews | The Rise Of Seron Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --black: #020403;
+      --panel: #050b07;
+      --green-dark: #0b3b24;
+      --green-mid: #1f7a3b;
+      --lime: #7CFF5B;
+      --text: #e6ffe9;
+      --text-muted: #7fbf96;
+      --border: #163322;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: radial-gradient(circle at top, #07140c 0, #020403 55%, #000 100%);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--lime); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(90deg, #020403 0, #050b07 40%, #020403 100%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title { 
+      font-size: 1.7rem; 
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-shadow: 0 0 12px rgba(124,255,91,0.7);
+    }
+
+    nav { display: flex; gap: 1rem; }
+    nav a { color: var(--text-muted); border-bottom: 1px solid transparent; }
+    nav a:hover { color: var(--lime); border-bottom-color: var(--lime); }
+
+    main {
+      max-width: 1100px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, #0b3b24 0, #050b07 40%, #020403 100%);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    }
+
+    .panel h1, .panel h2 {
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.75rem;
+    }
+
+    .review-block {
+      margin-bottom: 1.5rem;
+    }
+
+    .reviewer {
+      color: var(--lime);
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timestamp {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--green-mid), transparent);
+      margin: 1rem 0;
+      opacity: 0.7;
+      border: none;
+    }
+
+    footer {
+      background: #020403;
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title">Reviews</div>
+
+    <nav>
+      <a href="index.html">Main Page</a>
+      <a href="characters.html">Characters</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- TOP REVIEWERS -->
+  <section class="panel">
+    <h1>Top Reviewers</h1>
+
+    <div class="review-block">
+      <div class="reviewer">alexmorrow92</div>
+      <p>Known for detailed breakdowns and consistent feedback across multiple characters.</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">mira_arts04</div>
+      <p>Popular for emotional and character‑driven reviews.</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">galaxynomad77</div>
+      <p>Focuses heavily on worldbuilding and galaxy‑scale lore.</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">archivekid101</div>
+      <p>Writes longform reviews and lore analysis.</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">roguelegacy14</div>
+      <p>Specializes in reviewing clone‑related characters.</p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY REVIEWS -->
+  <section class="panel">
+    <h1>Community Reviews</h1>
+
+    <!-- START REVIEWS -->
+
+    <div class="review-block">
+      <div class="reviewer">alexmorrow92</div>
+      <div class="timestamp">Posted 2 hours ago</div>
+      <p>“Seron’s story feels surprisingly emotional. Didn’t expect that level of depth.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">jordanplays17</div>
+      <div class="timestamp">Posted 1 day ago</div>
+      <p>“Kole Rogue is chaotic in the best way. Easily my favorite so far.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">mira_arts04</div>
+      <div class="timestamp">Posted 3 days ago</div>
+      <p>“Michael Rogue is the emotional core of the clones. Love his calm vibe.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">tylerdev88</div>
+      <div class="timestamp">Posted 5 hours ago</div>
+      <p>“Angelis is such a cool character. Street‑level but still terrifying.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">theo_time21</div>
+      <div class="timestamp">Posted 12 hours ago</div>
+      <p>“Riven’s time abilities are insane. Easily the most unique character.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">harborline56</div>
+      <div class="timestamp">Posted 4 days ago</div>
+      <p>“David Spike’s whole arc is tragic. I actually felt bad for him.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">sunnyvale12</div>
+      <div class="timestamp">Posted 6 hours ago</div>
+      <p>“Riven’s rewrite made him feel way more grounded and interesting.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">marcelnotes33</div>
+      <div class="timestamp">Posted 2 days ago</div>
+      <p>“Marcel Toxin is such a cool concept. Scientist characters always hit for me.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">caseycore19</div>
+      <div class="timestamp">Posted 1 hour ago</div>
+      <p>“Casey Vigor is underrated. His whole vibe is calm but powerful.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">crimsonline47</div>
+      <div class="timestamp">Posted 3 hours ago</div>
+      <p>“Ral Awakening is terrifying. The fear aura idea is genius.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">connorvault08</div>
+      <div class="timestamp">Posted 5 days ago</div>
+      <p>“Connor Violet is the definition of loyalty. His shield is iconic.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">galaxynomad77</div>
+      <div class="timestamp">Posted 2 hours ago</div>
+      <p>“The Zavila Galaxy feels like a real place. Love the worldbuilding.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">nightwatcher29</div>
+      <div class="timestamp">Posted 7 hours ago</div>
+      <p>“Angelis gives off major vigilante energy. Love the darker tone.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">archivekid101</div>
+      <div class="timestamp">Posted 1 day ago</div>
+      <p>“The lore is surprisingly deep. This could be a whole animated series.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">angelo_p76</div>
+      <div class="timestamp">Posted 9 hours ago</div>
+      <p>“Angelo Pierce deserves more attention. His tactical mind is awesome.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">voidbreaker64</div>
+      <div class="timestamp">Posted 3 days ago</div>
+      <p>“David Spike’s corruption arc is heartbreaking. Great writing.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">emeraldsent03</div>
+      <div class="timestamp">Posted 2 hours ago</div>
+      <p>“The Guardians feel like a real team. Everyone has a purpose.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">omniwatch55</div>
+      <div class="timestamp">Posted 8 hours ago</div>
+      <p>“Seron’s origin story is one of the best I’ve read in a fan universe.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">roguelegacy14</div>
+      <div class="timestamp">Posted 4 hours ago</div>
+      <p>“The Rogue clones are so interesting. Each one feels unique.”</p>
+    </div>
+
+    <div class="review-block">
+      <div class="reviewer">zavila_maps22</div>
+      <div class="timestamp">Posted 6 days ago</div>
+      <p>“The galaxy itself feels alive. A map page would be amazing.”</p>
+    </div>
+
+    <!-- END REVIEWS -->
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© The Rise Of Seron Wiki — Community Reviews</span>
+    <span>Black • Dark Green • Lime Green Theme</span>
+  </div>
+</footer>
+
+</body>
+</html>
