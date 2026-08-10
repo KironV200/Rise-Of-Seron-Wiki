@@ -26,17 +26,18 @@
     body {
       background: radial-gradient(circle at top, #07140c 0, #020403 55%, #000 100%);
       color: var(--text);
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      line-height: 1.6;
     }
 
     a {
       color: var(--lime);
       text-decoration: none;
     }
-    a:hover {
+    a:hover, a:focus {
       text-decoration: underline;
     }
 
@@ -60,6 +61,7 @@
 
     .site-title {
       font-size: 1.7rem;
+      font-weight: bold;
       color: var(--lime);
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -128,7 +130,7 @@
       overflow: hidden;
     }
 
-    .panel h1, .panel h2 {
+    .panel h1, .panel h2, .panel h3 {
       color: var(--lime);
       text-transform: uppercase;
       letter-spacing: 0.18em;
@@ -141,6 +143,11 @@
       margin: 1rem 0;
       opacity: 0.7;
       border: none;
+    }
+
+    .highlight {
+      color: var(--lime);
+      font-weight: bold;
     }
 
     footer {
@@ -169,7 +176,7 @@
       <div class="site-title">The Rise Of Seron Wiki</div>
       <div class="site-subtitle">Omniversal Chronicles Of Super Darkness</div>
     </div>
-    <nav>
+    <nav aria-label="Main Navigation">
       <a href="index.html">Main Page</a>
       <a href="characters.html">Characters</a>
       <a href="#">The Guardians</a>
@@ -179,7 +186,7 @@
   </div>
 </header>
 
-<!-- ⭐ LOGO INSERTED HERE ⭐ -->
+<!-- LOGO INSERTED HERE -->
 <div class="logo-container">
   <img src="SeronLogo.png" alt="Seron Logo" class="site-logo">
 </div>
@@ -190,82 +197,57 @@
   <section class="panel">
     <h1>Welcome to The Rise Of Seron</h1>
     <p>
-      The Rise Of Seron Wiki is the central archive of the <span class="highlight">ROS Universe</span>,
-      the <span class="highlight">Zavila Galaxy</span>, and the eternal legacy of
-      <span class="highlight">Seron “Super” Darkness</span> — the omniversal architect whose will shapes all existence.
+      The Rise Of Seron Wiki is the central archive following the adventures, origins, and stories of <span class="highlight">Seron “Super” Darkness</span> and <span class="highlight">The Guardians</span> across multiple story arcs and sagas.
     </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
-    <h2>The Origin of Seron</h2>
+    <h2>The Origin & Legacy of Seron</h2>
     <p>
-      Seron did not begin as a being — he began as a force. A consciousness formed from the first
-      collision between existence and non-existence, stabilizing the chaos that preceded creation.
-      His essence is a controlled darkness, not destructive but foundational, binding the omniverse
-      together like cosmic gravity.
+      Seron did not begin merely as a warrior—he stands as an omniversal force. Bound to a legacy of controlled darkness, Seron acts as the prime defender of reality alongside his elite allies. His journeys span countless battles, uncovering ancient secrets, facing rogue factions, and preserving balance across space and time.
     </p>
 
+    <h2>The Zavila Galaxy & Worlds</h2>
     <p>
-      Through Seron’s will, the first galaxies ignited, the first laws of reality formed, and the
-      first sparks of life emerged. He is the <span class="highlight">Prime Creator</span>, the
-      <span class="highlight">Eternal Guardian</span>, and the <span class="highlight">central figure</span>
-      of all ROS lore.
-    </p>
-
-    <h2>The ROS Universe</h2>
-    <p>
-      The ROS Universe is Seron’s primary creation — a vast omniversal domain containing countless
-      galaxies, dimensional layers, and metaphysical systems. Every world carries a trace of Seron’s
-      influence, from the smallest particle to the largest cosmic titan.
-    </p>
-
-    <p>The universe is divided into major eras:</p>
-    <p>
-      • <span class="highlight">Founding Era</span> — Seron shapes the first galaxies.<br>
-      • <span class="highlight">Awakening Era</span> — new beings rise, some loyal, some hostile.<br>
-      • <span class="highlight">Fracture Era</span> — cosmic threats attempt to corrupt the Zavila Galaxy.<br>
-      • <span class="highlight">Guardian Era</span> — Seron forms his elite order to protect creation.
-    </p>
-
-    <h2>The Zavila Galaxy</h2>
-    <p>
-      The Zavila Galaxy is the heart of Seron’s creation — a massive spiral galaxy filled with
-      ancient civilizations, energy-rich star clusters, and dimensional gateways. It is the strategic
-      center of the omniverse and the primary battleground for forces seeking to challenge Seron’s rule.
+      <span class="highlight">The Zavila Galaxy</span> is the home galaxy of the Guardians, containing their primary strongholds, allied planets, and surrounding locations:
     </p>
 
     <p>
-      Many of Seron’s greatest allies and enemies originate from Zavila, making it the most documented
-      region in the entire wiki.
+      • <span class="highlight">Guardia</span> — The home planet of the Guardians.<br>
+      • <span class="highlight">Zavara</span> — The sister planet of Guardia and the primary workforce powering its operations.<br>
+      • <span class="highlight">OverDarkis</span> — The blood moon planet and the home world of Andrew OverDark.<br>
+      • <span class="highlight">Varkuun</span> — A bounty hunter planet and the home of the Crimson Fears.<br>
+      • <span class="highlight">Ignis Vortem</span> — A volcanic lava planet.<br>
+      • <span class="highlight">Draygon</span> — A notorious bounty hunter world.<br>
+      • <span class="highlight">Aurelis Prime</span> — A high-tech city world situated right next to Vor'Kar.<br>
+      • <span class="highlight">Vor'Kar</span> — A harsh desert planet.<br>
+      • <span class="highlight">Nirvana-Xenthos</span> — A frozen snow planet distinctively carved by red rivers.
     </p>
 
     <h2>The Guardians</h2>
     <p>
-      To maintain balance across the omniverse, Seron created <span class="highlight">The Guardians</span> —
-      an elite order of warriors, scholars, and cosmic entities. Each Guardian carries a fragment of
-      Seron’s power, granting them abilities far beyond mortal limits.
+      To defend the Zavila Galaxy and all surrounding sectors, Seron leads <span class="highlight">The Guardians</span>—an elite team of warriors, tacticians, and cosmic protectors. Together, they confront galaxy-spanning threats, investigate rogue factions, and uphold justice across every world and location within their realm.
     </p>
 
-    <p>Their duties include:</p>
+    <p>Their key responsibilities include:</p>
     <p>
-      • Defending the Zavila Galaxy from external threats<br>
-      • Stabilizing dimensional rifts and anomalies<br>
-      • Confronting corrupted void-born entities<br>
-      • Preserving the cosmic laws Seron established
+      • Protecting Guardia and the Zavila Galaxy from hostile forces<br>
+      • Investigating dark anomalies, ancient artifacts, and dangerous technologies<br>
+      • Standing as the front line against rogue syndicates and dark conspiracies<br>
+      • Maintaining order across all allied planets, bounty territories, and dangerous frontiers
     </p>
 
     <h2>What This Wiki Contains</h2>
     <p>This wiki serves as the official archive for:</p>
     <p>
-      • Character profiles (Seron, Kole, and more)<br>
-      • Guardian ranks, missions, and history<br>
-      • Zavila Galaxy planets, factions, and civilizations<br>
-      • Major events across all eras<br>
-      • Powers, abilities, and cosmic systems<br>
-      • Lore expansions, timelines, and universe structure
+      • Character profiles (Seron, Kole, Ral, Angelo, Tom, Casey, and more)<br>
+      • Guardian ranks, missions, and story arcs<br>
+      • Zavila Galaxy planets, locations, and factions<br>
+      • Major sagas, chapters, and side-stories<br>
+      • Powers, abilities, and weapons of the ROS universe
     </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
     <h2 id="categories">Categories</h2>
     <p><a href="characters.html">Characters</a></p>
@@ -278,9 +260,11 @@
   <!-- INFOBOX -->
   <aside class="panel">
     <h2>Omniversal Overview</h2>
-    <p><strong>Central Figure:</strong> Seron “Super” Darkness</p>
-    <p><strong>Primary Setting:</strong> ROS Universe & The Zavila Galaxy</p>
-    <p><strong>Defenders:</strong> The Guardians</p>
+    <p><strong>Leader:</strong> Seron “Super” Darkness</p>
+    <p><strong>Home Galaxy:</strong> The Zavila Galaxy</p>
+    <p><strong>Home Planet:</strong> Guardia</p>
+    <p><strong>Sister Planet:</strong> Zavara</p>
+    <p><strong>Primary Defenders:</strong> The Guardians</p>
   </aside>
 
 </main>
