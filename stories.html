@@ -17,39 +17,83 @@
       --border: #163322;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       background: radial-gradient(circle at top, #07140c 0, #020403 55%, #000 100%);
       color: var(--text);
-      font-family: system-ui, sans-serif;
-      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
     }
 
-    a { color: var(--lime); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--lime);
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
 
     header {
       background: linear-gradient(90deg, #020403 0, #050b07 40%, #020403 100%);
       border-bottom: 1px solid var(--border);
-      padding: 0.75rem 1.5rem;
       position: sticky;
       top: 0;
       z-index: 20;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .site-title {
       font-size: 1.7rem;
+      font-weight: bold;
       color: var(--lime);
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      text-shadow: 0 0 12px rgba(124,255,91,0.7);
     }
 
-    nav { margin-top: 0.5rem; }
-    nav a { margin-right: 1rem; color: var(--text-muted); }
+    .site-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      border-bottom: 1px solid transparent;
+    }
+    nav a:hover {
+      color: var(--lime);
+      border-bottom-color: var(--lime);
+    }
 
     main {
       max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      flex: 1;
     }
 
     .panel {
@@ -65,13 +109,36 @@
       color: var(--lime);
       text-transform: uppercase;
       letter-spacing: 0.18em;
+      margin-bottom: 0.5rem;
+    }
+
+    .panel h3 {
+      font-size: 1.1rem;
+      margin-top: 1rem;
     }
 
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--green-mid), transparent);
       margin: 1rem 0;
+      opacity: 0.7;
       border: none;
+    }
+
+    footer {
+      background: #020403;
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
   </style>
 </head>
@@ -79,21 +146,26 @@
 <body>
 
 <header>
-  <div class="site-title">Stories</div>
-  <nav aria-label="Main Navigation">
-    <a href="index.html">Main Page</a>
-    <a href="characters.html">Characters</a>
-    <a href="stories.html">Stories</a>
-  </nav>
+  <div class="header-inner">
+    <div>
+      <div class="site-title">Stories</div>
+      <div class="site-subtitle">The Rise Of Seron Wiki</div>
+    </div>
+    <nav aria-label="Main Navigation">
+      <a href="index.html">Main Page</a>
+      <a href="characters.html">Characters</a>
+      <a href="stories.html">Stories</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
   <section class="panel">
-    <h1>Stories</h1>
-    <p>Welcome to the Stories category. Here you can explore every saga, arc, and series in the Rise Of Seron universe.</p>
+    <h1>Stories Archive</h1>
+    <p>Welcome to the Stories archive. Explore every saga, story arc, and side-chronicle in the Rise Of Seron universe.</p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2>Current Sagas / Storylines</h2>
 <p>
@@ -101,7 +173,7 @@ These are the active, ongoing narrative arcs currently shaping the Rise Of Seron
 contains multiple interconnected stories that build the larger canon.
 </p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2>Saga 1: The Zavara Heist Saga</h2>
 <p>The first major saga following the discovery of Prism Order activity and the traitor within the Guardians.</p>
@@ -121,7 +193,7 @@ contains multiple interconnected stories that build the larger canon.
 <h3><a href="under_your_knife.html">Under Your Knife</a></h3>
 <p>The finale — Tom hunts down Vlasta in the Aether Mines and ends the Prism Order for good.</p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2>Saga 2: The Blood Moon Saga</h2>
 <p>The second saga, beginning immediately after the Zavara Heist, exploring the mysteries of OverDarkis and the Blood Moon phenomenon.</p>
@@ -139,7 +211,7 @@ under the Blood Moon, and the moment Seron contacts him with devastating news �
 attack, and a cache of Crimson Fear Swords has been stolen.
 </p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2>Saga 3: The Varkuun Incident</h2>
 <p>
@@ -163,17 +235,22 @@ Angelo Pierce arrives with pre-planned contingencies, neutralizes Vexx Administr
 Ral Awakening and Angelo Pierce breach a Vexx Empire Dreadnought alone, brutally executing the Vexx garrison, dismantling their black-market smuggling operation, and securing the stolen Crimson Fear Arsenal while Princess Anuket watches in admiration.
 </p>
 
-    <hr class="divider" />
+<h3><a href="beneath_the_stormy_seas_ch6-10.html">Beneath The Stormy Seas — Chapters 6–10</a></h3>
+<p>
+Andrew OverDark arrives on Varkuun to aid the Guardians. Facing Director Ami Zero and the Vexx Empire, Andrew brutally neutralizes Ami while Ral unveils a deadly sword-and-chain combo that leaves Princess Anuket completely mesmerized.
+</p>
+
+    <hr class="divider" aria-hidden="true" />
 
     <h2><a href="series1.html">Series 1 — The Zavila Galaxy Series 1</a></h2>
     <p>The origin season of the Zavila Galaxy. Features 11 major stories, character awakenings, cosmic threats, and the first full-scale war of Guardia.</p>
     
-   <hr class="divider" />
+   <hr class="divider" aria-hidden="true" />
     
     <h2><a href="series2.html">Series 2 — The Guardians Rising Era</a></h2>
 <p>The second major season of the Zavila Galaxy saga. Follows the aftermath of the Spike Empire’s fall, the rise of new threats, and the Guardians’ transition into galactic peacekeepers.</p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2><a href="zavila_series3.html">The Zavila Galaxy Series 3</a></h2>
 <p>
@@ -181,7 +258,7 @@ The Hell Era — a multi‑dimensional war spanning Pandemonium, Zavara, and Gua
 Tom Letanio’s Zenith Form, the rise of Lord Movkos, and the sealing of the Infernal Dimensions.
 </p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2><a href="civil_war_ch1.html">The Civil War — Chapter 1: The War Unnoticed</a></h2>
 <p>
@@ -189,7 +266,7 @@ Casey Vigor’s powers malfunction, Nova Watch approaches him with lies, and Ser
 after a confrontation at the Vexx Empire Crash Site.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="the_zavara_heist.html">The Zavara Heist</a></h2>
 <p>
@@ -197,7 +274,7 @@ Seron Darkness, Tom Letanio, and Cody Kritz hunt Arsenio Beau Innes through aban
 uncovering the truth behind his past and his planned heist on the Zavaran Power Plant.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="zavila_series4.html">The Zavila Galaxy Series 4</a></h2>
 <p>
@@ -205,7 +282,7 @@ The Chronos & Ignis Era — a dual‑saga exploring temporal collapse, ancient f
 rise of Babylon beneath Ignis Vortem.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="dunes_of_time.html">Casey Vigor: The Dunes Of Time</a></h2>
 <p>
@@ -213,7 +290,7 @@ Casey Vigor becomes stranded in the Kacia Desert and uncovers a buried Vexx Empi
 attempting to replicate Emperor Void’s corruption.
 </p>
 
-  <hr class="divider" />
+  <hr class="divider" aria-hidden="true" />
 
 <h2><a href="prism_order.html">The Prism Order</a></h2>
 <p>
@@ -221,7 +298,7 @@ The Zavara Heist Part 2 — Seron, Tom, and Cody uncover a Prism Order lab exper
 revealing a conspiracy involving the Vexx Empire and rogue Guardian members.
 </p>
 
- <hr class="divider" />
+ <hr class="divider" aria-hidden="true" />
 
 <h2><a href="diary_of_angelo.html">The Diary Of Angelo</a></h2>
 <p>
@@ -229,7 +306,7 @@ The early journals of Angelo Pierce — the Universal Starline Captain — chron
 discoveries, and the story of how Zavara became his home long before he met Seron or the Guardians.
 </p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2><a href="black_star_station.html">Black Star Station</a></h2>
 <p>
@@ -237,7 +314,7 @@ In 2036, Seron creates the Guardians’ first space‑station HQ — inspired by
 orbital fortress powered by Dark Star Essence.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="reach_for_the_stars.html">Reach For The Stars</a></h2>
 <p>
@@ -245,7 +322,7 @@ Tom Letanio uncovers a Prism Order lab in the Kacia Desert and discovers the tru
 is the traitor within the Guardians.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="blood_moon_party.html">The Blood Moon Party</a></h2>
 <p>
@@ -253,7 +330,7 @@ Tom, Seron, and Kole attend the first Blood Moon Festival on OverDarkis — unti
 attack, powered by a Blood Moon Crystal that Tom destroys.
 </p>
 
-<hr class="divider" />
+<hr class="divider" aria-hidden="true" />
 
 <h2><a href="blood_moons_light.html">The Blood Moon's Light</a></h2>
 <p>
@@ -261,7 +338,7 @@ Marcel Toxin investigates the Blood Moon on OverDarkis and discovers a second Bl
 and the ancient symbol of the Fogborn Syndicate.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="under_your_knife.html">Under Your Knife</a></h2>
 <p>
@@ -269,7 +346,7 @@ The finale of the Zavara Heist storyline — Tom hunts down Vlasta Jeronim in th
 ends the Prism Order once and for all.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="blood_moon_memorial.html">The Blood Moon Memorial</a></h2>
 <p>
@@ -278,30 +355,44 @@ and confronting his grief. Seron reaches out through an Aether link, revealing t
 under siege and the Crimson Fear arsenal has been stolen — pulling Andrew back into the conflict.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="varkuun_incident_chapters1-5.html">The Varkuun Incident — Chapters 1–5</a></h2>
 <p>
 The Guardians arrive on Varkuun after Seron's warning, discovering the astral ruins and meeting Princess Anuket, who notices Ral's Crimson Fear Sword.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="varkuun_incident_chapters6-10.html">The Varkuun Incident — Chapters 6–10</a></h2>
 <p>
 Angelo Pierce arrives with active contingencies, detects the Vexx Empire, eliminates Administrator Rick Astro, and assesses the stolen Crimson Fear count with Princess Anuket.
 </p>
 
-    <hr class="divider" />
+    <hr class="divider" aria-hidden="true" />
 
 <h2><a href="beneath_the_stormy_seas.html">Beneath The Stormy Seas — Chapters 1–5</a></h2>
 <p>
 Ral Awakening and Angelo Pierce breach a Vexx Empire Dreadnought, annihilating the forces inside, dismantling the black-market trade network, and recovering the stolen Crimson Fear Arsenal.
 </p>
 
+    <hr class="divider" aria-hidden="true" />
+
+<h2><a href="beneath_the_stormy_seas_ch6-10.html">Beneath The Stormy Seas — Chapters 6–10</a></h2>
+<p>
+Andrew OverDark arrives on Varkuun to aid the Guardians. Facing Director Ami Zero and the Vexx Empire, Andrew brutally neutralizes Ami while Ral unveils a deadly sword-and-chain combo that leaves Princess Anuket completely mesmerized.
+</p>
+
   </section>
 
 </main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© The Rise Of Seron Wiki — Omniversal Archive</span>
+    <span>Black • Dark Green • Lime Green Theme</span>
+  </div>
+</footer>
 
 </body>
 </html>
