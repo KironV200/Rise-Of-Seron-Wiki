@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saga 6: The Black Prism Saga | ROS Universe Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --black: #020403;
+      --panel: #050b07;
+      --green-dark: #0b3b24;
+      --green-mid: #1f7a3b;
+      --lime: #7CFF5B;
+      --lime-glow: rgba(124, 255, 91, 0.4);
+      --text: #e6ffe9;
+      --text-muted: #7fbf96;
+      --border: #163322;
+      --prism-purple: #9d4edd;
+      --prism-glow: rgba(157, 78, 221, 0.35);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: radial-gradient(circle at top, #09170e 0%, #020403 55%, #000000 100%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+
+    a { color: var(--lime); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #ffffff; text-shadow: 0 0 8px var(--lime-glow); }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--green-dark); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--green-mid); }
+
+    header {
+      background: linear-gradient(90deg, #020403 0%, #050b07 50%, #020403 100%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title { 
+      font-size: 1.4rem; 
+      font-weight: 700;
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 12px var(--lime-glow);
+    }
+
+    nav { display: flex; gap: 1.25rem; }
+    nav a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+    nav a:hover { color: var(--lime); }
+
+    main {
+      max-width: 1100px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, #0b3b24 0%, #050b07 40%, #020403 100%);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    }
+
+    .panel h1 {
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.2rem;
+      font-size: 2rem;
+      text-shadow: 0 0 10px var(--lime-glow);
+    }
+
+    .saga-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .panel h2 {
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    /* Full Character Cast Grid Layout */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cast-card {
+      background: rgba(5, 11, 7, 0.85);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--lime);
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .cast-card.antagonist {
+      border-left-color: var(--prism-purple);
+    }
+
+    .cast-card strong {
+      color: var(--lime);
+      display: block;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    .cast-card.antagonist strong {
+      color: #c77dff;
+    }
+
+    .cast-card ul {
+      list-style-type: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .cast-card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--green-mid), transparent);
+      margin: 2rem 0;
+      border: none;
+    }
+
+    /* Wiki Interactive Tabber Navigation */
+    .tabber-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .tabber-btn {
+      background: var(--panel);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.6rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.2s ease;
+    }
+
+    .tabber-btn:hover {
+      border-color: var(--green-mid);
+      color: var(--lime);
+    }
+
+    .tabber-btn.active {
+      background: var(--green-dark);
+      color: var(--lime);
+      border-color: var(--lime);
+      box-shadow: 0 0 10px var(--lime-glow);
+    }
+
+    /* Arc Content Tab Panels */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Chapter Cards */
+    .chapter-card {
+      background: rgba(2, 4, 3, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .chapter-card:hover {
+      border-color: var(--green-mid);
+      transform: translateX(3px);
+    }
+
+    .chapter-tag {
+      display: inline-block;
+      background: var(--green-dark);
+      color: var(--lime);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-size: 1.2rem;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .chapter-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .chapter-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: #020403;
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title">ROS Universe Wiki</div>
+    <nav>
+      <a href="#">Main Page</a>
+      <a href="#">Sagas</a>
+      <a href="#">Guardians</a>
+      <a href="#">The Black Prism</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="panel">
+    <h1>Saga 6: The Black Prism Saga</h1>
+    <div class="saga-subtitle">Full Character Cast & 7-Act Arc Breakdown</div>
+
+    <h2>Full Character Cast</h2>
+    <div class="cast-grid">
+      <div class="cast-card">
+        <strong>Primary Guardians (Main Saga Cast)</strong>
+        <ul>
+          <li>Seron Darkness</li>
+          <li>Angelo Darkness</li>
+          <li>Tom Letanio</li>
+          <li>Kole Rogue</li>
+          <li>Samuel Stardust</li>
+          <li>Andrew OverDark</li>
+          <li>Alex Chronos</li>
+        </ul>
+      </div>
+
+      <div class="cast-card antagonist">
+        <strong>Black Prism Faction (Antagonists)</strong>
+        <ul>
+          <li>Spectra Vivida — Prismian Emperor (Corrupted)</li>
+          <li>Marty Crispin — First Anomaly</li>
+          <li>Loyd Ulric — Black Pine Executioner</li>
+          <li>Jefferson Lyric — Attacker of Samuel</li>
+          <li>Eon Data — Scanner Unit</li>
+          <li>Black Prism Soldiers — Prismosa Combat Force</li>
+        </ul>
+      </div>
+
+      <div class="cast-card">
+        <strong>Neutral / Allied Factions</strong>
+        <ul>
+          <li>Prismian Council & Aetherian Delegates</li>
+          <li>Nova Watch</li>
+          <li>Independent Guardians</li>
+          <li>Zavara Defense Network</li>
+        </ul>
+      </div>
+
+      <div class="cast-card">
+        <strong>Key Locations & Artifacts</strong>
+        <ul>
+          <li>Prismosa (Prismian Homeworld)</li>
+          <li>Zavara Mines & Black Pine</li>
+          <li>Night Hunter City</li>
+          <li>Phoenix Dial (Artifact)</li>
+          <li>Emperor Vexx Armor (Corrupted Variant)</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <h2>Act Breakdown</h2>
+
+    <!-- Interactive Tabber Navigation -->
+    <div class="tabber-nav">
+      <button class="tabber-btn active" onclick="openAct(event, 'act-1')">Act 1</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-2')">Act 2</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-3')">Act 3</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-4')">Act 4</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-5')">Act 5</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-6')">Act 6</button>
+      <button class="tabber-btn" onclick="openAct(event, 'act-7')">Act 7</button>
+    </div>
+
+    <!-- Act 1 Container -->
+    <div id="act-1" class="tab-content active">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 1</span>
+        <div class="chapter-title">The Shattering of the First Prism</div>
+        <p>A strange energy surge triggers the arrival of the first anomaly as Marty Crispin emerges onto the scene. Investigating high-density energy readings in the deep Zavara Mines, Tom Letanio confronts Marty in an intense skirmish.</p>
+        <p>Upon defeating the operative, Tom retrieves a dropped insignia—the first Black Prism badge. After analyzing the badge's dark refraction field, Seron Darkness officially confirms the dangerous return of the Black Prism faction.</p>
+      </div>
+    </div>
+
+    <!-- Act 2 Container -->
+    <div id="act-2" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 2</span>
+        <div class="chapter-title">The Prism That Should Not Shine</div>
+        <p>A second, larger anomaly ruptures space, coinciding with an execution order issued by Loyd Ulric. Kole Rogue travels to the dense woods of Black Pine to investigate the disturbance and directly confronts Loyd.</p>
+        <p>During the battle, Kole intercepts sealed intel revealing that the Guardians themselves have been marked for targeted elimination. Kole immediately returns to HQ, alerting the strike team that the Black Prism has launched an active hunt across the region.</p>
+      </div>
+    </div>
+
+    <!-- Act 3 Container -->
+    <div id="act-3" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 3</span>
+        <div class="chapter-title">The Night the Prism Drew Blood</div>
+        <p>Escalating their offensive, the Black Prism begins directly ambushing targets in Night Hunter City. Samuel Stardust is ambushed in an unexpected assault led by Jefferson Lyric.</p>
+        <p>While fighting off his attacker, Samuel uncovers startling data indicating that Nova Watch is also being hunted by Black Prism hit squads. Bringing his discoveries back to command, Seron confirms the threat is rapidly expanding beyond isolated encounters.</p>
+      </div>
+    </div>
+
+    <!-- Act 4 Container -->
+    <div id="act-4" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 4</span>
+        <div class="chapter-title">The Day the Prism Marked Its Targets</div>
+        <p>The faction publicly broadcasts its finalized target list, putting every major defender on high alert. Andrew OverDark is confronted by Eon Data, a precision scanner whose analysis matrix completely fails and glitches when attempting to read Andrew's complex aura structure.</p>
+        <p>Through the intel gathered during this encounter, the Guardians uncover crucial lore: the Prismians originate from the realm of Prismosa and share a historical rivalry with the Aetherians.</p>
+      </div>
+    </div>
+
+    <!-- Act 5 Container -->
+    <div id="act-5" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 5</span>
+        <div class="chapter-title">The Prism That Whispered War</div>
+        <p>Faced with total annihilation, a grand alliance is formed joining the Guardians, Nova Watch, Independent Guardians, and the Zavara Defense Network. Tom Letanio reveals that Marty Crispin was originally hunting down a legendary artifact known as the Phoenix Dial.</p>
+        <p>Seron Darkness delivers a full briefing detailing the origins of Prismians and their homeworld, Prismosa. With all factions aligned, full-scale war preparations begin for an off-world invasion.</p>
+      </div>
+    </div>
+
+    <!-- Act 6 Container -->
+    <div id="act-6" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 6</span>
+        <div class="chapter-title">The Prism That Tested the Alliance</div>
+        <p>The joint alliance fleet lands on the crystal-encrusted surface of Prismosa, initiating a full-scale assault against entrenched Black Prism Soldiers. As the army pushes back the defensive line, Seron Darkness and Angelo Darkness push forward to confront Spectra Vivida, the Prismian Emperor.</p>
+        <p>Spectra enters the battlefield wearing a corrupted variant of the stolen Emperor Vexx Armor. Utilizing his technical mastery, Angelo manages to breach the suit's neural uplink and force a complete system shutdown.</p>
+      </div>
+    </div>
+
+    <!-- Act 7 Container -->
+    <div id="act-7" class="tab-content">
+      <div class="chapter-card">
+        <span class="chapter-tag">Act 7</span>
+        <div class="chapter-title">The Fall of the Prismian Emperor</div>
+        <p>In the final showdown, Seron and Angelo combine their powers to defeat Spectra Vivida. Inspecting the fallen Emperor, Angelo discovers an insidious Vexx control device attached to Spectra's mind, proving he was being puppeteered all along.</p>
+        <p>Removing the device frees Spectra from corruption, paving the way for a true alliance between Prismians and Aetherians. While the alliance celebrates, Seron turns his focus to the shadows, investigating the surviving traces of Vexx influence.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© ROS Universe Wiki — Saga 6: The Black Prism Saga</span>
+    <span>Guardians & Prismian Lore Archive</span>
+  </div>
+</footer>
+
+<script>
+  function openAct(evt, actId) {
+    const tabContents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+      tabContents[i].classList.remove("active");
+    }
+
+    const tabButtons = document.getElementsByClassName("tabber-btn");
+    for (let i = 0; i < tabButtons.length; i++) {
+      tabButtons[i].classList.remove("active");
+    }
+
+    document.getElementById(actId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
