@@ -87,7 +87,24 @@
     }
 
     .character-block {
+      display: flex;
+      gap: 1.5rem;
       margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .character-avatar {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid var(--lime);
+      box-shadow: 0 0 10px rgba(124, 255, 91, 0.3);
+      flex-shrink: 0;
+    }
+
+    .character-info {
+      flex: 1;
     }
 
     .divider {
@@ -113,6 +130,14 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
+    @media (max-width: 600px) {
+      .character-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -137,712 +162,808 @@
     <h1>Characters</h1>
 
 <div class="character-block">
-  <h2><a href="seron.html">Seron “Super” Darkness</a></h2>
-  <p>
-    Seron is the primordial architect of the universe — a former human who ascended after 
-    surviving the collapse of his original reality. Absorbed into a dying Dark Star, he 
-    awakened as a cosmic entity capable of shaping galaxies, dimensions, and the laws of 
-    existence itself.
-  </p>
-  <p>
-    Calm, distant, and impossibly powerful, Seron serves as the silent stabilizing force 
-    behind the Zavila Galaxy. His influence is woven into every star and every event, even 
-    when he does not appear directly.
-  </p>
+  <img src="Character Images/SeronDarkness.png" alt="Seron Darkness" class="character-avatar" />
+  <div class="character-info">
+    <h2><a href="seron.html">Seron “Super” Darkness</a></h2>
+    <p>
+      Seron is the primordial architect of the universe — a former human who ascended after 
+      surviving the collapse of his original reality. Absorbed into a dying Dark Star, he 
+      awakened as a cosmic entity capable of shaping galaxies, dimensions, and the laws of 
+      existence itself.
+    </p>
+    <p>
+      Calm, distant, and impossibly powerful, Seron serves as the silent stabilizing force 
+      behind the Zavila Galaxy. His influence is woven into every star and every event, even 
+      when he does not appear directly.
+    </p>
+  </div>
 </div>
 
 <hr class="divider" />
 
-<h2><a href="kole_rogue.html">Kole Rogue</a></h2>
-<p>
-Kole Rogue — known throughout the Zavila Galaxy as <strong>The Arsonist</strong> — is one of the earliest
-and most unstable Seron-Type clones ever created. Born from an experimental attempt to replicate
-Seron’s cosmic structure, Kole inherited only fragments of Seron’s power, but those fragments
-manifested as uncontrollable thermal energy and violent emotional surges.
-</p>
+<div class="character-block">
+  <img src="Character Images/KoleRogue.png" alt="Kole Rogue" class="character-avatar" />
+  <div class="character-info">
+    <h2><a href="kole_rogue.html">Kole Rogue</a></h2>
+    <p>
+      Kole Rogue — known throughout the Zavila Galaxy as <strong>The Arsonist</strong> — is one of the earliest
+      and most unstable Seron-Type clones ever created. Born from an experimental attempt to replicate
+      Seron’s cosmic structure, Kole inherited only fragments of Seron’s power, but those fragments
+      manifested as uncontrollable thermal energy and violent emotional surges.
+    </p>
+    <p>
+      Kole fights with a molten fire axe capable of melting steel and igniting entire battlefields. His
+      body constantly radiates heat, and his presence alone can warp the air around him. Though aggressive,
+      reckless, and driven by instinct, Kole is not inherently evil — he is a fractured being struggling
+      to understand his identity and purpose.
+    </p>
+    <p>
+      His unpredictable nature makes him a dangerous wildcard in the galaxy. Sometimes an enemy,
+      sometimes an ally, and sometimes a force of nature acting on pure emotion, Kole’s actions often
+      shift the balance of major conflicts. His full story, abilities, and origins are detailed on his
+      dedicated page.
+    </p>
+  </div>
+</div>
 
-<p>
-Kole fights with a molten fire axe capable of melting steel and igniting entire battlefields. His
-body constantly radiates heat, and his presence alone can warp the air around him. Though aggressive,
-reckless, and driven by instinct, Kole is not inherently evil — he is a fractured being struggling
-to understand his identity and purpose.
-</p>
-
-<p>
-His unpredictable nature makes him a dangerous wildcard in the galaxy. Sometimes an enemy,
-sometimes an ally, and sometimes a force of nature acting on pure emotion, Kole’s actions often
-shift the balance of major conflicts. His full story, abilities, and origins are detailed on his
-dedicated page.
-</p>
-
-
- <hr class="divider" />
+<hr class="divider" />
 
 <div class="character-block">
-  <h2>Angelis “Shifter” Darkness</h2>
-  <p>
-    Angelis is a Seron‑type clone who rejected cosmic destiny and instead became the
-    galaxy’s most feared street‑level hunter. Born without Seron’s cosmic abilities,
-    Angelis developed heightened reflexes, brutal efficiency, and a predatory instinct
-    that earned him the title <span class="highlight">The Night Hunter</span>.
-  </p>
-  <p>
-    Operating in the darkest corners of the Zavila Galaxy, Angelis hunts criminals,
-    corrupt officials, and violent offenders using a SPAS‑12 shotgun, a Desert Eagle,
-    dual pistols, and his signature crowbar. His combat style is ruthless, fast, and
-    grounded — the opposite of Seron’s cosmic grace.
-  </p>
-  <p>
-    Cold, intense, and morally uncompromising, Angelis is the shadow Seron never wanted
-    to become — but sometimes needed. He is the clone who fights the battles no one
-    else sees, protecting the innocent through fear, precision, and relentless pursuit.
-  </p>
+  <img src="Character Images/Shifter.png" alt="Angelis Darkness" class="character-avatar" />
+  <div class="character-info">
+    <h2>Angelis “Shifter” Darkness</h2>
+    <p>
+      Angelis is a Seron‑type clone who rejected cosmic destiny and instead became the
+      galaxy’s most feared street‑level hunter. Born without Seron’s cosmic abilities,
+      Angelis developed heightened reflexes, brutal efficiency, and a predatory instinct
+      that earned him the title <span class="highlight">The Night Hunter</span>.
+    </p>
+    <p>
+      Operating in the darkest corners of the Zavila Galaxy, Angelis hunts criminals,
+      corrupt officials, and violent offenders using a SPAS‑12 shotgun, a Desert Eagle,
+      dual pistols, and his signature crowbar. His combat style is ruthless, fast, and
+      grounded — the opposite of Seron’s cosmic grace.
+    </p>
+    <p>
+      Cold, intense, and morally uncompromising, Angelis is the shadow Seron never wanted
+      to become — but sometimes needed. He is the clone who fights the battles no one
+      else sees, protecting the innocent through fear, precision, and relentless pursuit.
+    </p>
+  </div>
 </div>
-    
-
 
 <hr class="divider" />
 
 <!-- ANGELO -->
 <div class="character-block">
-  <h2>Angelo Pierce</h2>
-  <p>
-    Angelo is a legendary space‑faring tactician and former commander of the 
-    Universal Starline. His flagship vanished during a catastrophic battle, 
-    only to be rediscovered decades later — intact when it should have been destroyed. 
-    Angelo’s knowledge of cosmic warfare, starship systems, and contingency planning 
-    makes him an invaluable ally to Seron.
-  </p>
-  <p>
-    He is known for creating contingency plans for every Guardian, not out of distrust, 
-    but out of respect for the destructive potential they carry. Angelo’s return marks 
-    the beginning of a new era in the ROS Universe.
-  </p>
+  <img src="Character Images/AngeloPierce.png" alt="Angelo Pierce" class="character-avatar" />
+  <div class="character-info">
+    <h2>Angelo Pierce</h2>
+    <p>
+      Angelo is a legendary space‑faring tactician and former commander of the 
+      Universal Starline. His flagship vanished during a catastrophic battle, 
+      only to be rediscovered decades later — intact when it should have been destroyed. 
+      Angelo’s knowledge of cosmic warfare, starship systems, and contingency planning 
+      makes him an invaluable ally to Seron.
+    </p>
+    <p>
+      He is known for creating contingency plans for every Guardian, not out of distrust, 
+      but out of respect for the destructive potential they carry. Angelo’s return marks 
+      the beginning of a new era in the ROS Universe.
+    </p>
+  </div>
 </div>
 
 <hr class="divider" />
 
 <!-- MASON -->
 <div class="character-block">
-  <h2>Mason “Killer” Darkness</h2>
-  <p>
-    Mason is a Xanian‑born Guardian whose raw physical power rivals early cosmic titans. 
-    Nicknamed “Killer” during the Fracture Era, Mason earned his reputation by single‑handedly 
-    eliminating void‑spawned monstrosities that threatened the Zavila Galaxy. 
-  </p>
-  <p>
-    Though feared by enemies, Mason is fiercely loyal to Seron and the Guardians. 
-    His Xanian biology grants him enhanced regeneration, extreme durability, and 
-    the ability to channel destructive kinetic bursts. Mason is a frontline warrior 
-    who thrives in impossible battles.
-  </p>
-</div>
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Michael Rogue</h2>
-  <p>
-    Michael Rogue is the most emotionally stable of the Seron‑type clones — a rare
-    creation whose identity formed around compassion, restraint, and clarity rather than
-    chaos. While he lacks Seron’s cosmic scale, he possesses something equally valuable:
-    a balanced mind capable of wielding temporal power without corruption.
-  </p>
-  <p>
-    Michael carries two signature tools: a stolen temporal pocket watch once owned by
-    the tyrant Grayson Talon, and a guitar‑axe that channels harmonic energy into
-    shockwaves and stabilizing fields. These abilities make him one of the most
-    versatile Guardians in the Zavila Galaxy.
-  </p>
-  <p>
-    Calm, empathetic, and morally grounded, Michael often acts as the emotional anchor
-    among the clones. He is the one who chooses understanding over domination, and time
-    over chaos — a stabilizing force in a universe shaped by conflict.
-  </p>
-</div>
-
-        <hr class="divider" />
-
-<div class="character-block">
-  <h2>Andrew OverDark</h2>
-  <p>
-    Andrew OverDark — known as the Black Rose — is one of the most feared temporal beings
-    in existence. Once an ordinary man, Andrew awakened catastrophic time‑breaking power
-    after witnessing the murder of his wife during the Angelic Purges.
-  </p>
-  <p>
-    Consumed by grief and sleep‑deprived fury, Andrew hunted the angelic host across
-    timelines, erasing their leader Adam from existence. He is not evil — but he is
-    merciless, a god forged from heartbreak whose power reshaped cosmic history.
-  </p>
-</div>
-
-    <hr class="divider" />
-    
-
-<div class="character-block">
-  <h2>Riven Solari</h2>
-  <p>
-    Riven Solari is a half‑angel warrior who defected from the celestial regime after
-    uncovering the truth behind their purges. His hybrid nature grants him immense
-    physical power, but his true weapon is <span class="highlight">Emperor Red</span>,
-    a temporal Stand capable of erasing or skipping segments of time.
-  </p>
-  <p>
-    Calm, disciplined, and morally grounded, Riven fights not for revenge but for
-    justice. His knowledge of angelic warfare and his temporal abilities make him one
-    of the most unpredictable allies in the Zavila Galaxy.
-  </p>
-</div>
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>David Spike</h2>
-  <p>
-    Once Seron’s closest friend, David Spike was consumed by a collapsing star‑void
-    that rewrote his memories and twisted his body into a vessel of entropy. Now known
-    as <span class="highlight">The Black Nebula</span>, David wields destructive
-    entropy energy capable of decaying matter, destabilizing regions, and tearing
-    through cosmic barriers.
-  </p>
-  <p>
-    His corruption is fueled by a lie — the belief that Seron abandoned him. This
-    false memory drives his rage, making him one of the most tragic and catastrophic
-    threats in the ROS Universe.
-  </p>
-</div>
-
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Connor Violet</h2>
-  <p>
-    Connor Violet, known as <span class="highlight">Captain Violet</span>, is a
-    Serlium‑enhanced warrior who fights with a blue cyber revolver and the legendary
-    Serlium Shield — a near‑indestructible artifact capable of absorbing cosmic,
-    elemental, and temporal attacks.
-  </p>
-  <p>
-    Tactical, loyal, and unwaveringly brave, Connor stands as one of Seron’s most
-    trusted allies. His presence on the battlefield is a symbol of stability and
-    hope across the Zavila Galaxy.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Ral Awakening</h2>
-  <p>
-    Ral Awakening is a fear‑driven executioner whose trauma‑born awakening granted him
-    terrifying abilities. Wielding <span class="highlight">Crimson Fear</span> — a
-    blade that amplifies terror — and reinforced chains, Ral fights with a brutal,
-    unpredictable hybrid style.
-  </p>
-  <p>
-    Cold, unstable, and sadistic, Ral spreads psychological devastation wherever he
-    appears. He is one of the most dangerous independent threats in the ROS Universe.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Casey Vigor</h2>
-  <p>
-    Casey Vigor is the last survivor of the Vigor bloodline — a family once known for
-    their rare isotope‑based abilities. After witnessing the extermination of his
-    lineage, Casey underwent <span class="highlight">Isotope Ascension</span>,
-    transforming into an immortal nuclear entity.
-  </p>
-  <p>
-    Calm, patient, and quietly powerful, Casey channels his trauma into purpose. His
-    nuclear abilities make him a stabilizing force in cosmic conflicts and a symbol of
-    survival across the Zavila Galaxy.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Marcel Toxin</h2>
-  <p>
-    Marcel Toxin is a biochemical genius whose own experiments reshaped his body. A
-    catastrophic lab accident altered his lungs and nerves, forcing him to breathe
-    toxin‑filtered air and leaving him unable to feel physical touch.
-  </p>
-  <p>
-    Wielding a green bio‑energy scythe and a mind sharpened by scientific obsession,
-    Marcel treats the battlefield like a laboratory. Detached but not heartless, he
-    walks the line between hero and hazard.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Nathan Ice</h2>
-  <p>
-    Nathan Ice is the calm and disciplined King of the Iceberg Tower — a frozen fortress
-    in the far north of the Zavila Galaxy. As an Ice Elemental Ascendant, Nathan commands
-    glacial energy, sub‑zero temperatures, and crystalline constructs with unmatched
-    precision.
-  </p>
-  <p>
-    Forced into leadership after the Angelic Purges claimed his parents, Nathan grew into
-    a protective and strategic monarch. His power is fueled not by rage, but by duty —
-    making him one of the galaxy’s most stable and respected elemental rulers.
-  </p>
-</div>
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Samuel “Wave” Andreas</h2>
-  <p>
-    Wave is Guardia City’s beloved Comedian Hero — a fast‑talking, joke‑cracking fighter
-    whose humor is as iconic as his abilities. Born with a rare adaptive mimic mutation,
-    Wave can instantly copy the powers of anyone he sees, making him one of the most
-    unpredictable heroes in the galaxy.
-  </p>
-  <p>
-    His jokes aren’t just for show — they keep allies calm, throw enemies off rhythm, and
-    turn fear into confidence. Beneath the humor is a compassionate hero who refuses to
-    let darkness win.
-  </p>
-</div>
-
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Tom Letanio</h2>
-  <p>
-    Tom Letanio is a disciplined temporal guardian who wields Indigo Fist — a powerful
-    close‑range Stand capable of stopping time indefinitely. Alongside his Stand, Tom
-    commands the Blue Phoenix, a celestial spirit of rebirth and blue flame.
-  </p>
-  <p>
-    Traumatized by the loss of his parents during the Angelic Purges, Tom forged himself
-    into a calm, controlled protector. His mastery of time, phoenix fire, and guardian
-    discipline makes him one of the most reliable defenders in the Zavila Galaxy.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Grayson Talon</h2>
-  <p>
-    Grayson Talon, known across the galaxy as <span class="highlight">The Pocket Watch Tyrant</span>,
-    is a brilliant but unstable temporal engineer whose experiments shattered his mind into
-    multiple elemental personalities. Grayson created the legendary <strong>Temporal Pocket Watch</strong>,
-    the same artifact later stolen and used by Michael Rogue.
-  </p>
-  <p>
-    Once a respected chronomancer, Grayson pushed too far into forbidden time‑fracture
-    research. The backlash split his consciousness into alternate personas — each with
-    its own elemental affinity and combat style. Grayson himself remains the cold,
-    calculating core personality, obsessed with reclaiming his lost inventions and
-    restoring his fractured identity.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Ignis Blaze</h2>
-  <p>
-    Ignis Blaze is the volatile fire‑elemental personality born from Grayson Talon’s
-    fractured mind. Unlike Grayson’s cold precision, Ignis is pure instinct — a living
-    inferno driven by emotion, destruction, and raw heat.
-  </p>
-  <p>
-    Ignis manifests whenever Grayson’s rage overwhelms his control. In this form, he
-    wields <strong>Pyro‑Flux</strong>, a burning aura capable of melting steel, igniting
-    air, and overwhelming opponents with explosive flame bursts. Ignis is unpredictable,
-    aggressive, and nearly impossible to reason with — the embodiment of Grayson’s
-    suppressed fury.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Finn Sealot</h2>
-  <p>
-    Finn Sealot is the Solaris‑aligned personality created when Grayson Talon’s mind
-    fractured under temporal overload. Calm, radiant, and eerily serene, Finn represents
-    Grayson’s idealized self — the version of him untouched by corruption or obsession.
-  </p>
-  <p>
-    Finn commands <strong>Solaris Energy</strong>, channeling concentrated sunlight into
-    beams, shields, and purifying blasts capable of cleansing corrupted matter. Unlike
-    Ignis, Finn is peaceful and philosophical, often appearing to guide or stabilize
-    Grayson’s collapsing psyche. But when threatened, his Solaris power becomes one of
-    the most destructive forces in the galaxy.
-  </p>
-</div>
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Esteban Maverick</h2>
-  <p>
-    Known across the coastlines as <span class="highlight">The Gunslinger of Beach City</span>,
-    Esteban Maverick is a fast‑talking, sharp‑shooting Guardian whose confidence borders on
-    arrogance — and he earns every bit of it. His dual pistols, <strong>Sunrise</strong> and
-    <strong>High Tide</strong>, channel kinetic Aether rounds capable of piercing armor and
-    destabilizing corrupted entities.
-  </p>
-
-  <p>
-    Esteban joined <strong>Team Crusader</strong> after saving an entire district during the
-    Angelic Purges, and Seron personally recruited him into the Guardians for his precision,
-    adaptability, and fearless attitude. Beneath the cocky exterior, Esteban is fiercely loyal
-    and hides a strategic mind sharper than his aim.
-  </p>
-</div>
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Royal Demetrios</h2>
-  <p>
-    Royal Demetrios is the <span class="highlight">2nd Time Breaker God</span> — a being capable
-    of bending temporal flow, rewriting micro‑timelines, and freezing causality itself. As the
-    <strong>Leader of Team Crusader</strong>, Royal carries the weight of countless timelines
-    on his shoulders, leaving him serious, calculating, and perpetually tired.
-  </p>
-
-  <p>
-    Despite his exhaustion, Royal remains one of the most reliable Guardians in existence.
-    His mastery of <strong>Chrono‑Aether</strong> allows him to predict enemy movements,
-    counter multiversal threats, and stabilize fractured dimensions. Royal rarely smiles,
-    but when he does, it’s usually because someone finally impressed him.
-  </p>
-</div>
-
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Marlo Laston (Silver Fang)</h2>
-  <p>
-    Marlo Laston — known across the Travia Arctic as <span class="highlight">Silver Fang</span> —
-    is a mercenary whose cold‑born instincts and razor precision make him one of the deadliest
-    hunters in the outer rim. Raised in blizzards and warzones, Marlo learned to track, stalk,
-    and eliminate targets with silent efficiency.
-  </p>
-  <p>
-    Though independent, Marlo frequently assists Angelis “Shifter” Darkness during high‑risk
-    hunts. His frost‑enhanced reflexes, arctic survival training, and silver‑edge combat claws
-    make him a perfect partner for the Night Hunter.
-  </p>
-</div>
-
-    <hr class="divider" />
-
-<div class="character-block">
-  <h2>Mindy Valor</h2>
-  <p>
-    Mindy Valor is the strategic and disciplined leader of <strong>Nova Watch</strong>, known
-    throughout the galaxy as <span class="highlight">The Watcher</span>. Her observational
-    abilities allow her to analyze Aether signatures, predict enemy movements, and track
-    anomalies across entire star systems.
-  </p>
-  <p>
-    Once Seron’s partner, Mindy still carries deep care for him despite their separation.
-    Her leadership, intelligence, and emotional restraint make her one of the most respected
-    commanders in the Zavila Galaxy.
-  </p>
-</div>
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Dominic Rogue </h2>
-  <p>
-    Dominic Rogue is the brother of Michael, Kole, HawkBat Rogue, Angelis Darkness, Angelo
-    Pierce, and Miles Church — a Seron‑type clone forged with enhanced stability and combat
-    instinct. Like his brothers, Dominic carries fragments of Seron’s cosmic structure.
-  </p>
-  <p>
-    Dominic is a Stand User, wielding <span class="highlight">Crimson Vanguard</span> — a
-    close‑range Stand specializing in rapid strikes, temporal feints, and crimson‑energy
-    shockwaves. Calm, loyal, and battle‑ready, Dominic is one of the most reliable fighters
-    among the Seron‑type lineage.
-  </p>
-</div>
-
-
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Peter Hydros</h2>
-  <p>
-    Peter Hydros — widely known as <span class="highlight">Electro Boy</span> — is a Guardian
-    whose pure electric abilities make him the livewire of Team Crusader. His personality is a
-    chaotic blend of humor, goofy confidence, and sudden poetic wisdom that appears at the most
-    unexpected moments.
-  </p>
+  <img src="Character Images/MasonDarkness.png" alt="Mason Darkness" class="character-avatar" />
+  <div class="character-info">
+    <h2>Mason “Killer” Darkness</h2>
     <p>
-    Peter generates and manipulates <strong>raw electricity</strong>, allowing him to unleash
-    lightning bursts, charge his body with voltage, accelerate his movements, and overload enemy
-    systems. Despite his comedic nature, Peter becomes sharply serious when the situation demands
-    it — especially when protecting Royal and Esteban, whom he considers his closest brothers.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Marty Crispin </h2>
-  <p>
-    Marty Crispin is a Prismosa‑born explorer who wields the legendary
-    <span class="highlight">Aether Dial</span> — a device that grants him the powers of
-    countless species across the Zavila Galaxy. Each form enhances his abilities without
-    altering his physical appearance, making him unpredictable and extremely versatile.
-  </p>
-  <p>
-    Marty’s adaptability, curiosity, and cosmic knowledge make him a valuable ally in
-    multi‑species conflicts and unknown‑world expeditions.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Proto Ballos</h2>
-  <p>
-    Proto Ballos is a sentient green‑laser pistol and one of the former crew members of
-    Angelo Pierce’s Universal Starline. Built with advanced AI and combat‑analysis systems,
-    Proto Ballos can speak, strategize, and coordinate with allies during battle.
-  </p>
-  <p>
-    Loyal to Angelo and fiercely protective of his crew, Proto Ballos remains one of the
-    most unique and intelligent weapons in the galaxy — a living relic of the Starline era.
-  </p>
-</div>
-
-  
-<hr class="divider" />
-
-<div class="character-block">
-  <h2>Samuel Stardust</h2>
-  <p>
-    Samuel Stardust is a supernatural hybrid created by the Vexx Empire through astral‑spectral
-    mutation. Designed as a living weapon, Samuel was engineered to channel stardust particles,
-    spectral energy, and cosmic vampirism. After escaping Vexx control, he joined the Guardians,
-    becoming one of their most unpredictable but invaluable allies.
-  </p>
-  <p>
-    Samuel can summon spectral entities formed from astral echoes, manipulate stardust into weapons
-    and barriers, and absorb cosmic energy through his vampiric mutation. Despite his dark origins,
-    he is quiet, gentle, and deeply protective of others.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Kauko Roni Kulmala</h2>
-  <p>
-    Kauko Roni Kulmala is a Shadowborn Ascendant and the founder of the Shadow Samurai Dynasty.
-    Born with Shadowborn Physiology, Kauko possesses a natural connection to elemental darkness,
-    allowing him to merge with shadows, move silently, and strike with void‑enhanced precision.
-  </p>
-  <p>
-    He forged the BlackWood Citadel atop a dimensional rift and created the Shadow Samurai Order,
-    training warriors to wield darkness with discipline and honor. Kauko commands shadows across
-    entire regions, wields the Riftblade forged from the BlackWood rift, and moves through shadow
-    rifts using Rift Step. Stoic, calculating, and unwavering, Kauko is one of the most powerful
-    shadow‑combat figures in the Zavila Galaxy.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Lynne Esmaralda</h2>
-  <p>
-    Lynne Esmaralda is a Heartstalker Aetherian born in the forests of Guardia. Gifted with
-    emotional‑tracking Aether, she can sense feelings like scents in the air and follow heroic
-    emotional signatures across miles. Drawn naturally to strong heroic energy, Lynne left her
-    Heartstalker community to follow the Guardians, whom she admires with overwhelming devotion.
-  </p>
-  <p>
-    Lynne boosts morale through her Heartbind Aura, can shadow‑step after those she bonds with,
-    and gains sudden strength when someone she admires is in danger. Sweet, dramatic, excitable,
-    and socially awkward, she tries her best to help the Guardians and has become a harmless,
-    loyal companion who often warns them of emotional disturbances before they occur.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Michael Valentino</h2>
-  <p>
-    Michael Valentino is an elite Guardian Enforcer known for his cosmic‑temporal Stand,
-    Stellaris. Capable of stopping time for several seconds, generating gravitational fields,
-    and unleashing stellar shockwaves, Michael excels in close‑quarters suppression and
-    high‑risk arrests. His Stand grants him cosmic awareness, allowing him to sense movement
-    and energy shifts around him.
-  </p>
-  <p>
-    Stoic, disciplined, and loyal, Michael respects Tom Letanio deeply and was personally
-    trained by him after his Stand awakened. Calm under pressure and focused on duty, Michael
-    serves as one of the Guardians’ most reliable frontline operatives, often deployed when
-    precise temporal control and overwhelming force are required.
-  </p>
-</div>
-
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Princess Anuket Nebet‑Hut</h2>
-  <p>
-    Princess Anuket Nebet‑Hut is a battle‑hardened warrior‑princess from Varkuun, a world of
-    astral weapon‑forges and elite warrior clans. Raised in the Nebet‑Hut Royal Warhouse,
-    Anuket mastered astral metallurgy, spear combat, and royal battlefield command from
-    childhood. She forged the Crimson Fear arsenal, legendary astral blades capable of
-    stabilizing hybrid cores.
-  </p>
-  <p>
-    Ruthless in battle yet honorable in conduct, Anuket commands Varkuun forces with absolute
-    authority. Her astral spear mastery, astral resonance, and brutal royal combat style make
-    her one of the galaxy’s most respected warrior leaders. Fiercely protective of her people,
-    she stands as both ruler and frontline fighter.
-  </p>
-</div>
-
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Miles Church</h2>
-  <p>
-    Miles Church is a Seron‑type clone whose powers manifested not in destruction, but in
-    restoration. Calm, compassionate, and emotionally perceptive, Miles can convert dark
-    energy into healing force, mend physical wounds, stabilize corrupted energy, and soothe
-    chaotic emotions through dark‑aura resonance.
-  </p>
-  <p>
-    Created to replicate Seron’s emotional stability, Miles became a healer who travels the
-    galaxy to help the wounded and restore balance in conflict zones. He specializes in
-    defensive combat, aura shielding, and non‑lethal takedowns, serving as a quiet but vital
-    presence among the Guardians and the clone lineage.
-  </p>
-</div>
-
-  <hr class="divider" />
-
-<div class="character-block">
-  <h2>Romilly Hyram Darkness</h2>
-  <p>
-    Romilly Hyram Darkness is a Seron‑type clone whose mutation granted him extraordinary
-    forging abilities rather than combat power. Able to shape dark energy into weapons,
-    artifacts, and energy‑bound constructs, Romilly has crafted iconic items such as Grayson
-    Talon’s pocket watch, Kole Rogue’s fire axe, and Michael Rogue’s guitar axe.
-  </p>
-  <p>
-    Quiet, focused, and endlessly creative, Romilly travels the galaxy studying ancient
-    materials and forgotten forging rituals. He can manipulate metals and crystals with his
-    hands alone, imbue items with elemental or emotional resonance, and create artifacts with
-    hidden functions known only to him. He is the one who arms warriors, not the one who fights.
-  </p>
-</div>
-
-
-
-
-
-
-    
-<hr class="divider" />
-    
-<div class="character-block">
-  <h2>David Kaine</h2>
-  <p>
-    David Kaine is the <span class="highlight">2nd Arsonist</span> — a volatile, fire‑born son of
-    Seron Darkness whose power manifests through a blazing <strong>Fire Katana</strong>. Unlike
-    Kole Rogue’s chaotic thermal core, David’s flames are sharp, controlled, and fueled by a deep
-    internal conflict he refuses to show.
-  </p>
-  <p>
-    Raised in Seron’s shadow but never under his guidance, David grew resentful of the Guardians
-    and the legacy he felt excluded from. Nova Watch exploited that resentment, twisting him into
-    a weapon before he eventually broke free and forged his own path.
-  </p>
-  <p>
-    Aggressive, prideful, and fiercely independent, David Kaine is a walking inferno — a son of
-    Seron who burns not for destiny, but for the right to define himself.
-  </p>
-</div>
-<hr class="divider" />
-    
-   <div class="character-block">
-  <h2>Rex Vioski</h2>
-  <p>
-    Rex Vioski was engineered as <span class="highlight">Anti‑Seron</span> — a clone built by
-    Nova Watch to counter Seron Darkness himself. Designed as a perfect inverse, Rex possessed
-    mirrored Aether, suppressed emotion, and a programmed hatred for the one he was meant to kill.
-  </p>
-  <p>
-    But the programming failed. Rex broke free, shattering Nova Watch’s control and abandoning
-    the identity forced upon him. Now he wanders the galaxy as a rogue anomaly — a Seron clone
-    without purpose, destiny, or allegiance.
-  </p>
-  <p>
-    Quiet, analytical, and emotionally fractured, Rex is a living contradiction: a weapon who
-    refuses to be used, and a clone searching for a soul that was never meant to exist.
-  </p>
-</div>
-    
-<hr class="divider" />
-    
-    <div class="character-block">
-  <h2>Alex Chronos</h2>
-  <p>
-    Alex Chronos is the Guardians’ <span class="highlight">Temporal Sniper</span> — a marksman
-    who manipulates micro‑timelines to guarantee perfect shots. His Chrono‑Lancer rifle fires
-    Aether rounds that bend trajectory, delay impact, or strike from alternate time‑frames.
-  </p>
-  <p>
-    Calm, observant, and unnervingly precise, Alex sees battlefields as branching timelines.
-    While others react to danger, he eliminates threats before they ever occur, rewriting the
-    outcome of fights with a single pull of the trigger.
-  </p>
-  <p>
-    Alex Chronos is the quiet backbone of the Guardians — the sniper who protects the future
-    by controlling the seconds that shape it.
-  </p>
+      Mason is a Xanian‑born Guardian whose raw physical power rivals early cosmic titans. 
+      Nicknamed “Killer” during the Fracture Era, Mason earned his reputation by single‑handedly 
+      eliminating void‑spawned monstrosities that threatened the Zavila Galaxy. 
+    </p>
+    <p>
+      Though feared by enemies, Mason is fiercely loyal to Seron and the Guardians. 
+      His Xanian biology grants him enhanced regeneration, extreme durability, and 
+      the ability to channel destructive kinetic bursts. Mason is a frontline warrior 
+      who thrives in impossible battles.
+    </p>
+  </div>
 </div>
 
 <hr class="divider" />
-    <div class="character-block">
-  <h2>Liam Spike</h2>
-  <p>
-    Liam Spike, son of David Spike, wields the cosmic radiance of a
-    <span class="highlight">Light Lord</span> — a power capable of purifying corruption,
-    stabilizing dimensional fractures, and countering Void‑born entities with raw celestial force.
-  </p>
-  <p>
-    Unlike his father’s descent into darkness, Liam embodies hope. His light is not gentle —
-    it is overwhelming, burning through lies, shadows, and cosmic threats with divine intensity.
-  </p>
-  <p>
-    Noble, emotional, and driven by the weight of his lineage, Liam fights not only for the
-    galaxy, but for the redemption of the Spike name. He is the beacon in an era drowning in
-    darkness.
-  </p>
+
+<div class="character-block">
+  <img src="Character Images/MichaelRogue.png" alt="Michael Rogue" class="character-avatar" />
+  <div class="character-info">
+    <h2>Michael Rogue</h2>
+    <p>
+      Michael Rogue is the most emotionally stable of the Seron‑type clones — a rare
+      creation whose identity formed around compassion, restraint, and clarity rather than
+      chaos. While he lacks Seron’s cosmic scale, he possesses something equally valuable:
+      a balanced mind capable of wielding temporal power without corruption.
+    </p>
+    <p>
+      Michael carries two signature tools: a stolen temporal pocket watch once owned by
+      the tyrant Grayson Talon, and a guitar‑axe that channels harmonic energy into
+      shockwaves and stabilizing fields. These abilities make him one of the most
+      versatile Guardians in the Zavila Galaxy.
+    </p>
+    <p>
+      Calm, empathetic, and morally grounded, Michael often acts as the emotional anchor
+      among the clones. He is the one who chooses understanding over domination, and time
+      over chaos — a stabilizing force in a universe shaped by conflict.
+    </p>
+  </div>
 </div>
 
+<hr class="divider" />
 
-    
+<div class="character-block">
+  <img src="Character Images/AndrewOverDark.png" alt="Andrew OverDark" class="character-avatar" />
+  <div class="character-info">
+    <h2>Andrew OverDark</h2>
+    <p>
+      Andrew OverDark — known as the Black Rose — is one of the most feared temporal beings
+      in existence. Once an ordinary man, Andrew awakened catastrophic time‑breaking power
+      after witnessing the murder of his wife during the Angelic Purges.
+    </p>
+    <p>
+      Consumed by grief and sleep‑deprived fury, Andrew hunted the angelic host across
+      timelines, erasing their leader Adam from existence. He is not evil — but he is
+      merciless, a god forged from heartbreak whose power reshaped cosmic history.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/RivenSolari.png" alt="Riven Solari" class="character-avatar" />
+  <div class="character-info">
+    <h2>Riven Solari</h2>
+    <p>
+      Riven Solari is a half‑angel warrior who defected from the celestial regime after
+      uncovering the truth behind their purges. His hybrid nature grants him immense
+      physical power, but his true weapon is <span class="highlight">Emperor Red</span>,
+      a temporal Stand capable of erasing or skipping segments of time.
+    </p>
+    <p>
+      Calm, disciplined, and morally grounded, Riven fights not for revenge but for
+      justice. His knowledge of angelic warfare and his temporal abilities make him one
+      of the most unpredictable allies in the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/DavidSpike.webp" alt="David Spike" class="character-avatar" />
+  <div class="character-info">
+    <h2>David Spike</h2>
+    <p>
+      Once Seron’s closest friend, David Spike was consumed by a collapsing star‑void
+      that rewrote his memories and twisted his body into a vessel of entropy. Now known
+      as <span class="highlight">The Black Nebula</span>, David wields destructive
+      entropy energy capable of decaying matter, destabilizing regions, and tearing
+      through cosmic barriers.
+    </p>
+    <p>
+      His corruption is fueled by a lie — the belief that Seron abandoned him. This
+      false memory drives his rage, making him one of the most tragic and catastrophic
+      threats in the ROS Universe.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/ConnorViolet.webp" alt="Connor Violet" class="character-avatar" />
+  <div class="character-info">
+    <h2>Connor Violet</h2>
+    <p>
+      Connor Violet, known as <span class="highlight">Captain Violet</span>, is a
+      Serlium‑enhanced warrior who fights with a blue cyber revolver and the legendary
+      Serlium Shield — a near‑indestructible artifact capable of absorbing cosmic,
+      elemental, and temporal attacks.
+    </p>
+    <p>
+      Tactical, loyal, and unwaveringly brave, Connor stands as one of Seron’s most
+      trusted allies. His presence on the battlefield is a symbol of stability and
+      hope across the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/RalAwakening.webp" alt="Ral Awakening" class="character-avatar" />
+  <div class="character-info">
+    <h2>Ral Awakening</h2>
+    <p>
+      Ral Awakening is a fear‑driven executioner whose trauma‑born awakening granted him
+      terrifying abilities. Wielding <span class="highlight">Crimson Fear</span> — a
+      blade that amplifies terror — and reinforced chains, Ral fights with a brutal,
+      unpredictable hybrid style.
+    </p>
+    <p>
+      Cold, unstable, and sadistic, Ral spreads psychological devastation wherever he
+      appears. He is one of the most dangerous independent threats in the ROS Universe.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/CaseyVigor.webp" alt="Casey Vigor" class="character-avatar" />
+  <div class="character-info">
+    <h2>Casey Vigor</h2>
+    <p>
+      Casey Vigor is the last survivor of the Vigor bloodline — a family once known for
+      their rare isotope‑based abilities. After witnessing the extermination of his
+      lineage, Casey underwent <span class="highlight">Isotope Ascension</span>,
+      transforming into an immortal nuclear entity.
+    </p>
+    <p>
+      Calm, patient, and quietly powerful, Casey channels his trauma into purpose. His
+      nuclear abilities make him a stabilizing force in cosmic conflicts and a symbol of
+      survival across the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MarcelToxin.png" alt="Marcel Toxin" class="character-avatar" />
+  <div class="character-info">
+    <h2>Marcel Toxin</h2>
+    <p>
+      Marcel Toxin is a biochemical genius whose own experiments reshaped his body. A
+      catastrophic lab accident altered his lungs and nerves, forcing him to breathe
+      toxin‑filtered air and leaving him unable to feel physical touch.
+    </p>
+    <p>
+      Wielding a green bio‑energy scythe and a mind sharpened by scientific obsession,
+      Marcel treats the battlefield like a laboratory. Detached but not heartless, he
+      walks the line between hero and hazard.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/NathanIce.png" alt="Nathan Ice" class="character-avatar" />
+  <div class="character-info">
+    <h2>Nathan Ice</h2>
+    <p>
+      Nathan Ice is the calm and disciplined King of the Iceberg Tower — a frozen fortress
+      in the far north of the Zavila Galaxy. As an Ice Elemental Ascendant, Nathan commands
+      glacial energy, sub‑zero temperatures, and crystalline constructs with unmatched
+      precision.
+    </p>
+    <p>
+      Forced into leadership after the Angelic Purges claimed his parents, Nathan grew into
+      a protective and strategic monarch. His power is fueled not by rage, but by duty —
+      making him one of the galaxy’s most stable and respected elemental rulers.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/SamuelAndreas.png" alt="Samuel Wave Andreas" class="character-avatar" />
+  <div class="character-info">
+    <h2>Samuel “Wave” Andreas</h2>
+    <p>
+      Wave is Guardia City’s beloved Comedian Hero — a fast‑talking, joke‑cracking fighter
+      whose humor is as iconic as his abilities. Born with a rare adaptive mimic mutation,
+      Wave can instantly copy the powers of anyone he sees, making him one of the most
+      unpredictable heroes in the galaxy.
+    </p>
+    <p>
+      His jokes aren’t just for show — they keep allies calm, throw enemies off rhythm, and
+      turn fear into confidence. Beneath the humor is a compassionate hero who refuses to
+      let darkness win.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/TomLetanio.png" alt="Tom Letanio" class="character-avatar" />
+  <div class="character-info">
+    <h2>Tom Letanio</h2>
+    <p>
+      Tom Letanio is a disciplined temporal guardian who wields Indigo Fist — a powerful
+      close‑range Stand capable of stopping time indefinitely. Alongside his Stand, Tom
+      commands the Blue Phoenix, a celestial spirit of rebirth and blue flame.
+    </p>
+    <p>
+      Traumatized by the loss of his parents during the Angelic Purges, Tom forged himself
+      into a calm, controlled protector. His mastery of time, phoenix fire, and guardian
+      discipline makes him one of the most reliable defenders in the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/GraysonTalon.png" alt="Grayson Talon" class="character-avatar" />
+  <div class="character-info">
+    <h2>Grayson Talon</h2>
+    <p>
+      Grayson Talon, known across the galaxy as <span class="highlight">The Pocket Watch Tyrant</span>,
+      is a brilliant but unstable temporal engineer whose experiments shattered his mind into
+      multiple elemental personalities. Grayson created the legendary <strong>Temporal Pocket Watch</strong>,
+      the same artifact later stolen and used by Michael Rogue.
+    </p>
+    <p>
+      Once a respected chronomancer, Grayson pushed too far into forbidden time‑fracture
+      research. The backlash split his consciousness into alternate personas — each with
+      its own elemental affinity and combat style. Grayson himself remains the cold,
+      calculating core personality, obsessed with reclaiming his lost inventions and
+      restoring his fractured identity.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/IgnisBlaze.png" alt="Ignis Blaze" class="character-avatar" />
+  <div class="character-info">
+    <h2>Ignis Blaze</h2>
+    <p>
+      Ignis Blaze is the volatile fire‑elemental personality born from Grayson Talon’s
+      fractured mind. Unlike Grayson’s cold precision, Ignis is pure instinct — a living
+      inferno driven by emotion, destruction, and raw heat.
+    </p>
+    <p>
+      Ignis manifests whenever Grayson’s rage overwhelms his control. In this form, he
+      wields <strong>Pyro‑Flux</strong>, a burning aura capable of melting steel, igniting
+      air, and overwhelming opponents with explosive flame bursts. Ignis is unpredictable,
+      aggressive, and nearly impossible to reason with — the embodiment of Grayson’s
+      suppressed fury.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/FinnSealot.png" alt="Finn Sealot" class="character-avatar" />
+  <div class="character-info">
+    <h2>Finn Sealot</h2>
+    <p>
+      Finn Sealot is the Solaris‑aligned personality created when Grayson Talon’s mind
+      fractured under temporal overload. Calm, radiant, and eerily serene, Finn represents
+      Grayson’s idealized self — the version of him untouched by corruption or obsession.
+    </p>
+    <p>
+      Finn commands <strong>Solaris Energy</strong>, channeling concentrated sunlight into
+      beams, shields, and purifying blasts capable of cleansing corrupted matter. Unlike
+      Ignis, Finn is peaceful and philosophical, often appearing to guide or stabilize
+      Grayson’s collapsing psyche. But when threatened, his Solaris power becomes one of
+      the most destructive forces in the galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/EstebanMaverick.png" alt="Esteban Maverick" class="character-avatar" />
+  <div class="character-info">
+    <h2>Esteban Maverick</h2>
+    <p>
+      Known across the coastlines as <span class="highlight">The Gunslinger of Beach City</span>,
+      Esteban Maverick is a fast‑talking, sharp‑shooting Guardian whose confidence borders on
+      arrogance — and he earns every bit of it. His dual pistols, <strong>Sunrise</strong> and
+      <strong>High Tide</strong>, channel kinetic Aether rounds capable of piercing armor and
+      destabilizing corrupted entities.
+    </p>
+    <p>
+      Esteban joined <strong>Team Crusader</strong> after saving an entire district during the
+      Angelic Purges, and Seron personally recruited him into the Guardians for his precision,
+      adaptability, and fearless attitude. Beneath the cocky exterior, Esteban is fiercely loyal
+      and hides a strategic mind sharper than his aim.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/RoyalDemetrios.png" alt="Royal Demetrios" class="character-avatar" />
+  <div class="character-info">
+    <h2>Royal Demetrios</h2>
+    <p>
+      Royal Demetrios is the <span class="highlight">2nd Time Breaker God</span> — a being capable
+      of bending temporal flow, rewriting micro‑timelines, and freezing causality itself. As the
+      <strong>Leader of Team Crusader</strong>, Royal carries the weight of countless timelines
+      on his shoulders, leaving him serious, calculating, and perpetually tired.
+    </p>
+    <p>
+      Despite his exhaustion, Royal remains one of the most reliable Guardians in existence.
+      His mastery of <strong>Chrono‑Aether</strong> allows him to predict enemy movements,
+      counter multiversal threats, and stabilize fractured dimensions. Royal rarely smiles,
+      but when he does, it’s usually because someone finally impressed him.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MarloLaston.png" alt="Marlo Laston" class="character-avatar" />
+  <div class="character-info">
+    <h2>Marlo Laston (Silver Fang)</h2>
+    <p>
+      Marlo Laston — known across the Travia Arctic as <span class="highlight">Silver Fang</span> —
+      is a mercenary whose cold‑born instincts and razor precision make him one of the deadliest
+      hunters in the outer rim. Raised in blizzards and warzones, Marlo learned to track, stalk,
+      and eliminate targets with silent efficiency.
+    </p>
+    <p>
+      Though independent, Marlo frequently assists Angelis “Shifter” Darkness during high‑risk
+      hunts. His frost‑enhanced reflexes, arctic survival training, and silver‑edge combat claws
+      make him a perfect partner for the Night Hunter.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MindyValor.png" alt="Mindy Valor" class="character-avatar" />
+  <div class="character-info">
+    <h2>Mindy Valor</h2>
+    <p>
+      Mindy Valor is the strategic and disciplined leader of <strong>Nova Watch</strong>, known
+      throughout the galaxy as <span class="highlight">The Watcher</span>. Her observational
+      abilities allow her to analyze Aether signatures, predict enemy movements, and track
+      anomalies across entire star systems.
+    </p>
+    <p>
+      Once Seron’s partner, Mindy still carries deep care for him despite their separation.
+      Her leadership, intelligence, and emotional restraint make her one of the most respected
+      commanders in the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/DominicRogue.png" alt="Dominic Rogue" class="character-avatar" />
+  <div class="character-info">
+    <h2>Dominic Rogue</h2>
+    <p>
+      Dominic Rogue is the brother of Michael, Kole, HawkBat Rogue, Angelis Darkness, Angelo
+      Pierce, and Miles Church — a Seron‑type clone forged with enhanced stability and combat
+      instinct. Like his brothers, Dominic carries fragments of Seron’s cosmic structure.
+    </p>
+    <p>
+      Dominic is a Stand User, wielding <span class="highlight">Crimson Vanguard</span> — a
+      close‑range Stand specializing in rapid strikes, temporal feints, and crimson‑energy
+      shockwaves. Calm, loyal, and battle‑ready, Dominic is one of the most reliable fighters
+      among the Seron‑type lineage.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/PeterHydros.png" alt="Peter Hydros" class="character-avatar" />
+  <div class="character-info">
+    <h2>Peter Hydros</h2>
+    <p>
+      Peter Hydros — widely known as <span class="highlight">Electro Boy</span> — is a Guardian
+      whose pure electric abilities make him the livewire of Team Crusader. His personality is a
+      chaotic blend of humor, goofy confidence, and sudden poetic wisdom that appears at the most
+      unexpected moments.
+    </p>
+    <p>
+      Peter generates and manipulates <strong>raw electricity</strong>, allowing him to unleash
+      lightning bursts, charge his body with voltage, accelerate his movements, and overload enemy
+      systems. Despite his comedic nature, Peter becomes sharply serious when the situation demands
+      it — especially when protecting Royal and Esteban, whom he considers his closest brothers.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MartyCrispin.png" alt="Marty Crispin" class="character-avatar" />
+  <div class="character-info">
+    <h2>Marty Crispin</h2>
+    <p>
+      Marty Crispin is a Prismosa‑born explorer who wields the legendary
+      <span class="highlight">Aether Dial</span> — a device that grants him the powers of
+      countless species across the Zavila Galaxy. Each form enhances his abilities without
+      altering his physical appearance, making him unpredictable and extremely versatile.
+    </p>
+    <p>
+      Marty’s adaptability, curiosity, and cosmic knowledge make him a valuable ally in
+      multi‑species conflicts and unknown‑world expeditions.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/ProtoBallos.png" alt="Proto Ballos" class="character-avatar" />
+  <div class="character-info">
+    <h2>Proto Ballos</h2>
+    <p>
+      Proto Ballos is a sentient green‑laser pistol and one of the former crew members of
+      Angelo Pierce’s Universal Starline. Built with advanced AI and combat‑analysis systems,
+      Proto Ballos can speak, strategize, and coordinate with allies during battle.
+    </p>
+    <p>
+      Loyal to Angelo and fiercely protective of his crew, Proto Ballos remains one of the
+      most unique and intelligent weapons in the galaxy — a living relic of the Starline era.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/SamuelStardust.png" alt="Samuel Stardust" class="character-avatar" />
+  <div class="character-info">
+    <h2>Samuel Stardust</h2>
+    <p>
+      Samuel Stardust is a supernatural hybrid created by the Vexx Empire through astral‑spectral
+      mutation. Designed as a living weapon, Samuel was engineered to channel stardust particles,
+      spectral energy, and cosmic vampirism. After escaping Vexx control, he joined the Guardians,
+      becoming one of their most unpredictable but invaluable allies.
+    </p>
+    <p>
+      Samuel can summon spectral entities formed from astral echoes, manipulate stardust into weapons
+      and barriers, and absorb cosmic energy through his vampiric mutation. Despite his dark origins,
+      he is quiet, gentle, and deeply protective of others.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/Kauko.webp" alt="Kauko Roni Kulmala" class="character-avatar" />
+  <div class="character-info">
+    <h2>Kauko Roni Kulmala</h2>
+    <p>
+      Kauko Roni Kulmala is a Shadowborn Ascendant and the founder of the Shadow Samurai Dynasty.
+      Born with Shadowborn Physiology, Kauko possesses a natural connection to elemental darkness,
+      allowing him to merge with shadows, move silently, and strike with void‑enhanced precision.
+    </p>
+    <p>
+      He forged the BlackWood Citadel atop a dimensional rift and created the Shadow Samurai Order,
+      training warriors to wield darkness with discipline and honor. Kauko commands shadows across
+      entire regions, wields the Riftblade forged from the BlackWood rift, and moves through shadow
+      rifts using Rift Step. Stoic, calculating, and unwavering, Kauko is one of the most powerful
+      shadow‑combat figures in the Zavila Galaxy.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/Lynne.png" alt="Lynne Esmaralda" class="character-avatar" />
+  <div class="character-info">
+    <h2>Lynne Esmaralda</h2>
+    <p>
+      Lynne Esmaralda is a Heartstalker Aetherian born in the forests of Guardia. Gifted with
+      emotional‑tracking Aether, she can sense feelings like scents in the air and follow heroic
+      emotional signatures across miles. Drawn naturally to strong heroic energy, Lynne left her
+      Heartstalker community to follow the Guardians, whom she admires with overwhelming devotion.
+    </p>
+    <p>
+      Lynne boosts morale through her Heartbind Aura, can shadow‑step after those she bonds with,
+      and gains sudden strength when someone she admires is in danger. Sweet, dramatic, excitable,
+      and socially awkward, she tries her best to help the Guardians and has become a harmless,
+      loyal companion who often warns them of emotional disturbances before they occur.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MichaelValentino.png" alt="Michael Valentino" class="character-avatar" />
+  <div class="character-info">
+    <h2>Michael Valentino</h2>
+    <p>
+      Michael Valentino is an elite Guardian Enforcer known for his cosmic‑temporal Stand,
+      Stellaris. Capable of stopping time for several seconds, generating gravitational fields,
+      and unleashing stellar shockwaves, Michael excels in close‑quarters suppression and
+      high‑risk arrests. His Stand grants him cosmic awareness, allowing him to sense movement
+      and energy shifts around him.
+    </p>
+    <p>
+      Stoic, disciplined, and loyal, Michael respects Tom Letanio deeply and was personally
+      trained by him after his Stand awakened. Calm under pressure and focused on duty, Michael
+      serves as one of the Guardians’ most reliable frontline operatives, often deployed when
+      precise temporal control and overwhelming force are required.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/Anuket.png" alt="Princess Anuket Nebet-Hut" class="character-avatar" />
+  <div class="character-info">
+    <h2>Princess Anuket Nebet‑Hut</h2>
+    <p>
+      Princess Anuket Nebet‑Hut is a battle‑hardened warrior‑princess from Varkuun, a world of
+      astral weapon‑forges and elite warrior clans. Raised in the Nebet‑Hut Royal Warhouse,
+      Anuket mastered astral metallurgy, spear combat, and royal battlefield command from
+      childhood. She forged the Crimson Fear arsenal, legendary astral blades capable of
+      stabilizing hybrid cores.
+    </p>
+    <p>
+      Ruthless in battle yet honorable in conduct, Anuket commands Varkuun forces with absolute
+      authority. Her astral spear mastery, astral resonance, and brutal royal combat style make
+      her one of the galaxy’s most respected warrior leaders. Fiercely protective of her people,
+      she stands as both ruler and frontline fighter.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/MilesChurch.png" alt="Miles Church" class="character-avatar" />
+  <div class="character-info">
+    <h2>Miles Church</h2>
+    <p>
+      Miles Church is a Seron‑type clone whose powers manifested not in destruction, but in
+      restoration. Calm, compassionate, and emotionally perceptive, Miles can convert dark
+      energy into healing force, mend physical wounds, stabilize corrupted energy, and soothe
+      chaotic emotions through dark‑aura resonance.
+    </p>
+    <p>
+      Created to replicate Seron’s emotional stability, Miles became a healer who travels the
+      galaxy to help the wounded and restore balance in conflict zones. He specializes in
+      defensive combat, aura shielding, and non‑lethal takedowns, serving as a quiet but vital
+      presence among the Guardians and the clone lineage.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/RomillyHyramDarkness.png" alt="Romilly Hyram Darkness" class="character-avatar" />
+  <div class="character-info">
+    <h2>Romilly Hyram Darkness</h2>
+    <p>
+      Romilly Hyram Darkness is a Seron‑type clone whose mutation granted him extraordinary
+      forging abilities rather than combat power. Able to shape dark energy into weapons,
+      artifacts, and energy‑bound constructs, Romilly has crafted iconic items such as Grayson
+      Talon’s pocket watch, Kole Rogue’s fire axe, and Michael Rogue’s guitar axe.
+    </p>
+    <p>
+      Quiet, focused, and endlessly creative, Romilly travels the galaxy studying ancient
+      materials and forgotten forging rituals. He can manipulate metals and crystals with his
+      hands alone, imbue items with elemental or emotional resonance, and create artifacts with
+      hidden functions known only to him. He is the one who arms warriors, not the one who fights.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/DavidKaine.png" alt="David Kaine" class="character-avatar" />
+  <div class="character-info">
+    <h2>David Kaine</h2>
+    <p>
+      David Kaine is the <span class="highlight">2nd Arsonist</span> — a volatile, fire‑born son of
+      Seron Darkness whose power manifests through a blazing <strong>Fire Katana</strong>. Unlike
+      Kole Rogue’s chaotic thermal core, David’s flames are sharp, controlled, and fueled by a deep
+      internal conflict he refuses to show.
+    </p>
+    <p>
+      Raised in Seron’s shadow but never under his guidance, David grew resentful of the Guardians
+      and the legacy he felt excluded from. Nova Watch exploited that resentment, twisting him into
+      a weapon before he eventually broke free and forged his own path.
+    </p>
+    <p>
+      Aggressive, prideful, and fiercely independent, David Kaine is a walking inferno — a son of
+      Seron who burns not for destiny, but for the right to define himself.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/RexVioski.png" alt="Rex Vioski" class="character-avatar" />
+  <div class="character-info">
+    <h2>Rex Vioski</h2>
+    <p>
+      Rex Vioski was engineered as <span class="highlight">Anti‑Seron</span> — a clone built by
+      Nova Watch to counter Seron Darkness himself. Designed as a perfect inverse, Rex possessed
+      mirrored Aether, suppressed emotion, and a programmed hatred for the one he was meant to kill.
+    </p>
+    <p>
+      But the programming failed. Rex broke free, shattering Nova Watch’s control and abandoning
+      the identity forced upon him. Now he wanders the galaxy as a rogue anomaly — a Seron clone
+      without purpose, destiny, or allegiance.
+    </p>
+    <p>
+      Quiet, analytical, and emotionally fractured, Rex is a living contradiction: a weapon who
+      refuses to be used, and a clone searching for a soul that was never meant to exist.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/AlexChronos.png" alt="Alex Chronos" class="character-avatar" />
+  <div class="character-info">
+    <h2>Alex Chronos</h2>
+    <p>
+      Alex Chronos is the Guardians’ <span class="highlight">Temporal Sniper</span> — a marksman
+      who manipulates micro‑timelines to guarantee perfect shots. His Chrono‑Lancer rifle fires
+      Aether rounds that bend trajectory, delay impact, or strike from alternate time‑frames.
+    </p>
+    <p>
+      Calm, observant, and unnervingly precise, Alex sees battlefields as branching timelines.
+      While others react to danger, he eliminates threats before they ever occur, rewriting the
+      outcome of fights with a single pull of the trigger.
+    </p>
+    <p>
+      Alex Chronos is the quiet backbone of the Guardians — the sniper who protects the future
+      by controlling the seconds that shape it.
+    </p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="character-block">
+  <img src="Character Images/LiamSpike.png" alt="Liam Spike" class="character-avatar" />
+  <div class="character-info">
+    <h2>Liam Spike</h2>
+    <p>
+      Liam Spike, son of David Spike, wields the cosmic radiance of a
+      <span class="highlight">Light Lord</span> — a power capable of purifying corruption,
+      stabilizing dimensional fractures, and countering Void‑born entities with raw celestial force.
+    </p>
+    <p>
+      Unlike his father’s descent into darkness, Liam embodies hope. His light is not gentle —
+      it is overwhelming, burning through lies, shadows, and cosmic threats with divine intensity.
+    </p>
+    <p>
+      Noble, emotional, and driven by the weight of his lineage, Liam fights not only for the
+      galaxy, but for the redemption of the Spike name. He is the beacon in an era drowning in
+      darkness.
+    </p>
+  </div>
+</div>
+
   </section>
 
 </main>
